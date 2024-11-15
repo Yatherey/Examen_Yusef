@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
@@ -48,23 +49,22 @@ class MainActivity : ComponentActivity() {
         setContent {
 
             Examen_YusefTheme {
-                student(name = "Alumno:"+ nombre,  tipo = "Soy alumno")
+                Card_estudiante(name = "Alumno:"+ nombre,  tipo = "Soy alumno")
                 Conversation(messages = Mensajes.conversationSample)
             }
         }
     }
 }
 
-
 @Composable
-fun student (name: String,  tipo : String){
-    Text(text = name,
-        fontSize = 40.sp,
-        fontWeight = FontWeight.Bold,
-    )
+fun Card_estudiante(name : String, tipo : String){
+
 }
 
+
+
 /* Creamos los valores que utilizaremos más adelante */
+
 val perfil = R.drawable.avatar1
     val alumno1= Color(0xFF8C9EFF)
     val nombre = "Yusef"
